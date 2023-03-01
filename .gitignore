@@ -1,0 +1,17 @@
+lib/*
+lib/Android/*
+!lib/Android
+lib/iOS/*
+!lib/iOS
+lib/Linux/*
+!lib/Linux
+lib/macOS/*
+!lib/macOS
+lib/Windows/*
+!lib/Windows
+
+!lib/Android/.gitkeep
+!lib/iOS/.gitkeep
+!lib/Linux/.gitkeep
+!lib/macOS/.gitkeep
+!lib/Windows/.gitkeep
