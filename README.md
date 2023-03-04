@@ -3,6 +3,60 @@
 C# binding for Cloudflare's [quiche](https://github.com/cloudflare/quiche).  
 [quiche](https://github.com/cloudflare/quiche) is an implementation of the QUIC transport protocol and HTTP/3 in Rust.
 
+## Table of contents
+- [How to setup environment](#how-to-setup-environment)
+- [How to build quiche library](#how-to-build-quiche-library)
+- [License](#license)
+
+## How to setup environment
+### Install Rust
+If you’re a Windows Subsystem for Linux user run the following in your terminal, then follow the on-screen instructions to install Rust.
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+### Install CMake
+#### GCC C++ Compiler
+```
+sudo apt install g++
+```
+
+#### OpenSSL
+```
+sudo apt install openssl libssl-dev
+```
+
+#### Make
+```
+sudo apt install make
+```
+
+#### CMake
+```
+wget https://github.com/Kitware/CMake/releases/download/v3.25.2/cmake-3.25.2.tar.gz
+tar xvf cmake-3.25.2.tar.gz
+```
+```
+cd cmake-3.25.2/
+./configure
+make
+sudo make install
+```
+
+## How to build quiche library
+### Windows
+For cross-compilation from WSL2 to Windows, you have to install MinGW-w64 and the x86_64-pc-windows-gnu target.
+
+```
+sudo apt install mingw-w64
+rustup target add x86_64-pc-windows-gnu
+```
+
+```
+cd ./external
+./build_quiche.sh
+```
+
 ## License
 ```
 --------------------------------------------------------------------------------
